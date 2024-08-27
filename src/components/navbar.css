@@ -1,0 +1,30 @@
+.navbar {
+  background-color: #2e1e3e;
+  color: white;
+  max-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backbutton {
+  background-color: #2e1e3e;
+  position: absolute;
+  left: 0;
+  max-height: 50px;
+}
+
+.navbarButton {
+  background-color: #000000;
+  font-family: Fira Code;
+  font-size: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin: 10px;
+}
+
+.activeNav {
+  background-color: #800000;
+  transition: background-color 0.5s;
+}

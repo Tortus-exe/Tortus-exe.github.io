@@ -1,0 +1,16 @@
+{
+	"categories": [
+		{
+			"title": "About", 
+			"uri": "about"
+		},
+		{
+			"title": "BQN", 
+			"uri": "BQN"
+		},
+		{
+			"title": "Cantonese",
+			"uri": "Cantonese"
+		}
+	]
+}

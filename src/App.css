@@ -1,0 +1,88 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+.App {
+  text-align: center;
+  background: black;
+}
+
+.mainScreenButton {
+  width: 100%;
+  background-color: black;
+  border: 0px solid black;
+  left: 0px;
+  transition: padding-left 0.5s;
+}
+
+.asciiArt {
+  font-family: Fira Code;
+}
+
+p {
+  white-space: pre;
+  display: inline-block;
+  color: white;
+}
+
+.buttonText {
+  color: gray;
+  font-family: Fira Code;
+  font-size: 40px;
+  padding: 10px;
+  text-align: left;
+  left: 0px;
+  transition: padding-left 0.5s;
+}
+
+.previewDiv {
+  float: left;
+  display: inline-block;
+  min-width: 600px;
+  min-height: 560px;
+}
+
+.selectionsDiv {
+  display: inline-block;
+}
+
+.active {
+  color: white;
+  padding-left: 40px;
+  background-color: blue;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
