@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[614],{614:s=>{s.exports=JSON.parse('{"contents":["basics.md"]}')}}]);
