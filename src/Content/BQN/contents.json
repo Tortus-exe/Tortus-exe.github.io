@@ -1,5 +1,8 @@
 {
 	"contents": [
-		"basics.md"
+		{
+			"filename": "basics.md",
+			"title": "basics"
+		}
 	]
 }

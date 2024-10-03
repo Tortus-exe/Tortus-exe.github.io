@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -7,10 +7,11 @@ import About from './About';
 import Blog from './blog_display'
 import CategoryListing from './category_listing'
 import reportWebVitals from './reportWebVitals';
+// import audio from './media/six-tones-cantonese.ogg';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path="/">
           <Route index element={<App />} />
@@ -26,7 +27,7 @@ root.render(
           <Route path="*" element={<App />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </Router>
 );
 
     /* <React.StrictMode> */

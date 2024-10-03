@@ -41,3 +41,7 @@
   font-family: Fira Code;
   font-size: 20px;
 }
+
+.synopsis > * > * {
+  white-space: normal;
+}

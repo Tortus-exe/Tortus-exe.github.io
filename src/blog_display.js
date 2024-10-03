@@ -21,6 +21,8 @@ function Blog() {
       )
   }, [loc.pathname])
 
+  console.log(process.env.PUBLIC_URL + '/path/resource');
+
   return (
     <div>
     <Navbar />

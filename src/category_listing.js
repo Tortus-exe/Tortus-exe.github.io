@@ -9,9 +9,9 @@ function MakeEntry(data, num) {
   let loc = useLocation();
 
   return (
-    <Link to={`${loc.pathname}/${data}`}>
+    <Link to={`${loc.pathname}/${data.filename}`}>
       <button key={num} className="entryButton">
-        {data}
+        {data.title}
       </button>
     </Link>
   );

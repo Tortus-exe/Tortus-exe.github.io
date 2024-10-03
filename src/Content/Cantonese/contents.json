@@ -1,5 +1,8 @@
 {
 	"contents": [
-		"basics.md"
+		{
+			"filename": "phonetics.md",
+			"title": "00 - phonetics"
+		}
 	]
 }
