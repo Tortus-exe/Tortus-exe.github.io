@@ -3,6 +3,10 @@
 		{
 			"filename": "phonetics.md",
 			"title": "00 - phonetics"
+		},
+		{
+			"filename": "sentences.md",
+			"title": "01 - sentences"
 		}
 	]
 }
