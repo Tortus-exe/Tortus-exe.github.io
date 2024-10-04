@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[371],{371:(e,o,p)=>{e.exports=p.p+"static/media/phonetics.9d2c75e1a6624cbe9db8.md"}}]);

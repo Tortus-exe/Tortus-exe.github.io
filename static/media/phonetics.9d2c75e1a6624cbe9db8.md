@@ -130,15 +130,15 @@ Anyway, I don't like IPA, but I also don't like how Cantonese is traditionally r
 - w
 
 The consonants are as follows:
-- a: <em>AAAA</em>HH
-- u: f<em>u</em>n
+- aa: <em>AAAA</em>HH
+- a: f<em>u</em>n
 - e: bl<em>e</em>nd
 - ø: (in French) j<em>eu</em>ne
-- au: l<em>aw</em>
-- o: l<em>ow</em>
+- o: l<em>aw</em>
+- ou: l<em>ow</em>
 - i: s<em>ee</em>m
-- ih: <em>i</em>nner
-- ü: (in German) <em>ü</em>berf<em>ü</em>llt
+- ii: <em>i</em>nner
+- v: (in German) <em>ü</em>berf<em>ü</em>llt
 - uu: f<em>oo</em>d
-- ö: b<em>oo</em>k
+- u: b<em>oo</em>k
 
