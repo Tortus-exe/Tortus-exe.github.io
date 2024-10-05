@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[283],{283:(e,t,s)=>{e.exports=s.p+"static/media/time_and_tense.37063f711de272a13630.md"}}]);

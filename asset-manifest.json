@@ -1,26 +1,28 @@
 {
   "files": {
     "main.css": "/static/css/main.b7518342.css",
-    "main.js": "/static/js/main.47fc6c95.js",
+    "main.js": "/static/js/main.15735250.js",
     "static/js/378.900b7960.chunk.js": "/static/js/378.900b7960.chunk.js",
     "static/js/179.0b26be12.chunk.js": "/static/js/179.0b26be12.chunk.js",
     "static/js/799.a9ab30f2.chunk.js": "/static/js/799.a9ab30f2.chunk.js",
-    "static/js/614.a0969f70.chunk.js": "/static/js/614.a0969f70.chunk.js",
+    "static/js/614.756b6d0c.chunk.js": "/static/js/614.756b6d0c.chunk.js",
     "static/js/371.2032484b.chunk.js": "/static/js/371.2032484b.chunk.js",
     "static/js/536.ff634aa4.chunk.js": "/static/js/536.ff634aa4.chunk.js",
     "static/js/54.126725c6.chunk.js": "/static/js/54.126725c6.chunk.js",
+    "static/js/283.c424bbf2.chunk.js": "/static/js/283.c424bbf2.chunk.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/phonetics.md": "/static/media/phonetics.9d2c75e1a6624cbe9db8.md",
     "static/media/sentences.md": "/static/media/sentences.8eb442b157e8bce2e5d2.md",
+    "static/media/time_and_tense.md": "/static/media/time_and_tense.37063f711de272a13630.md",
     "index.html": "/index.html",
     "static/media/synopsis.md": "/static/media/synopsis.32abcd88d5a9a5c3c021.md",
     "static/media/basics.md": "/static/media/basics.b7c5330a28e4c6385ef0.md",
     "main.b7518342.css.map": "/static/css/main.b7518342.css.map",
-    "main.47fc6c95.js.map": "/static/js/main.47fc6c95.js.map",
+    "main.15735250.js.map": "/static/js/main.15735250.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b7518342.css",
-    "static/js/main.47fc6c95.js"
+    "static/js/main.15735250.js"
   ]
 }
