@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[614],{614:e=>{e.exports=JSON.parse('{"contents":[{"filename":"phonetics.md","title":"00 - phonetics"},{"filename":"sentences.md","title":"01 - sentences"},{"filename":"time_and_tense.md","title":"02 - time and tense"}]}')}}]);
