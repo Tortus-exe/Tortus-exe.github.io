@@ -63,3 +63,49 @@ How: 點樣 (di̗m yœ̗ng) - in what way
 - What time is it? 而家幾點呀? (yi̱ gāa ge̗i di̗m aa)
 
 All open ended questions are formulated under one of these five categories. 
+
+## Practice
+
+Now that you know how to form the following questions, here's a summary of the words we've learned so far:
+
+| Word | Reading  |  Meaning       |
+|------|----------|----------------|
+| 唔   | m̖        | not            |
+| 乜嘢  | māt ye̗   | what          |
+| 咩   | mē       | what           |
+| 邊個  | bīn go   | who            |
+| 邊喥  | bīn do̱u  | where          |
+| 點解  | di̗m ga̗ai | why            |
+| 點樣  | di̗m yœ̗ng | in what way    |
+| 幾   | ge̗i      | to what extent |
+
+And a few more words that we came across in this chapter:
+
+| Word | Reading  |  Meaning       |
+|------|----------|----------------|
+| 完   | yv̖n      | to finish      |
+| 係   | ha̱i      | to be          |
+| 痴   | cī       | to go insane   |
+| 要   | yiu      | to need/want   |
+| 做   | jo̱u      | to do          |
+| 有   | ya̗u      | to exist/have  |
+| 冇   | mo̗u      | don't exist/have |
+| 信用卡 | sø̱n yu̱ng kāat | credit card |
+| 學校  | ho̱k ha̱au | school         |
+| 褲   | fu       | pants          |
+| 藥   | yœ̱k      | medicine       |
+| 老   | lo̗u      | old            |
+| 藍色  | na̖am sīk | blue           |
+| 歲   | sø̱i      | years old      |
+
+
+So, using these words, try to form the following sentences:
+- Where am I?
+- Where did we go? 
+- Who are you?
+- What are you doing? (remember the -ing ending from last chapter!)
+- I don't have the blue drugs!
+- Do you want the blue drugs?
+- Are you insane?
+- Are we done?
+- Do you need my credit card? (use 嘅, ga, to denote posession. e.g. 你嘅 = your)
