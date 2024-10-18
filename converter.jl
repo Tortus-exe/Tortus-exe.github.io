@@ -11,7 +11,11 @@ function emplaceTone(a)
     if(inx == 3) return chop(a) end
     tone_char = Char(tone_codepoints[inx])
     vowel_split = split(a, vowels, limit=2)
-    return join([vowel_split[1], tone_char, chop(vowel_split[2])])
+    if(length(vowel_split) > 1)
+        return join([vowel_split[1], tone_char, chop(vowel_split[2])])
+    else
+        return chop(vowel_split[1]) * tone_char
+    end
 end
 function translate(a)
     a |> x->replace(x,"eu" => "œ") |> x->replace(x,"eo" => "ø") |> x->return x
