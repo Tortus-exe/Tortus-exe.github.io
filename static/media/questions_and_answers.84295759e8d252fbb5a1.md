@@ -20,8 +20,10 @@ The lack of an ending particle can make this sound a bit strict, so most people 
 
 Now our roommate friend is not feeling so terrible anymore.
 Please note that when asking about the existence of something, the negative of "to exist" (有, ya̗u) is actually irregular. It should not be 唔有, as one might expect, but rather 無 (mo̗u). This character has an alternate form that Cantonese speakers prefer to use: 冇 (also pronounced mo̗u).
+Also note that when a verb has more than one character, such as 可以 (ho̗ yi̗, to be able to), only pair the first character with its negative. See these examples.
 
 - 你有冇信用卡呀? (ne̗i ya̗u mo̗u sø̱n yu̱ng kāat aa): Do you have a credit card?
+- 你可唔可以開門呀? (ne̗i ho̗ m̖ ho̗ yi̗ hōi mu̱n aa): Can you open the door?
 - 你係唔係痴咗呀?! (ne̗i ha̱i m̖ ha̱i cī jó aa): Are you crazy?!
 - 你食唔食藥呀? (ne̗i si̱k m̖ si̱k yœ̱k aa): Do you take any medicine?
 - 你係唔係老過18歲? (ne̗i ha̱i m̖ ha̱i lóu gwo sa̱p ba̱at sø̱i aa): Are you older than 18 years old?
@@ -86,12 +88,14 @@ And a few more words that we came across in this chapter:
 | 完   | yv̖n      | to finish      |
 | 係   | ha̱i      | to be          |
 | 痴   | cī       | to go insane   |
+| 開   | hōi      | to open        |
 | 要   | yiu      | to need/want   |
 | 做   | jo̱u      | to do          |
 | 有   | ya̗u      | to exist/have  |
 | 冇   | mo̗u      | don't exist/have |
 | 信用卡 | sø̱n yu̱ng kāat | credit card |
 | 學校  | ho̱k ha̱au | school         |
+| 門   | mu̱n      | door           |
 | 褲   | fu       | pants          |
 | 藥   | yœ̱k      | medicine       |
 | 老   | lo̗u      | old            |

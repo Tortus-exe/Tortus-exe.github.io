@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[536],{536:(e,s,t)=>{e.exports=t.p+"static/media/sentences.8eb442b157e8bce2e5d2.md"}}]);

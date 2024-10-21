@@ -1,13 +1,16 @@
 # Sentences
 
-Friends of mine often hear me say that Cantonese is the caveman language. Compared to English, that is no mistake: Cantonese sentences often are much simpler than their English counterparts. Consider the following English sentences and their translations.
+Friends of mine often hear me say that Cantonese is the caveman language. Compared to English, that is no mistake: Cantonese sentences often are much simpler than their English counterparts. Consider the following English sentences, their translations, and their word-by-word breakdown.
 
 - I went to the seven-eleven to buy some milk only to realize they actually don't sell it.
     - 我去咗七十一想買奶，但一到咗呢就發覺佢哋都唔賣
+    - I go -ed 7 11 want buy milk, but once arrive -ed then realize they also not sell (it)
 - My TV broke, but it's one of a kind so I decided to hire this TV genius to help us!
     - 我部電視懷咗，不過係冇得買返嘅，咁我寧願請呢個師傅幫我哋修理呀！
+    - My TV break -ed, but is unable buy again, so I decided hire this guru help us repair (it)!
 - Can you give me a ride?
     - 你可唔可以車我呀
+    - you can not- can drive me?
 
 No conjugations, no tenses, and no real rules other than where you put words. Easy! So, how do we string words together?
 
