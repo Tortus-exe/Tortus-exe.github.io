@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.b7518342.css",
-    "main.js": "/static/js/main.a38d9ea3.js",
+    "main.js": "/static/js/main.0ef3cb51.js",
     "static/js/378.900b7960.chunk.js": "/static/js/378.900b7960.chunk.js",
     "static/js/179.0b26be12.chunk.js": "/static/js/179.0b26be12.chunk.js",
     "static/js/799.a9ab30f2.chunk.js": "/static/js/799.a9ab30f2.chunk.js",
-    "static/js/614.6d151c0a.chunk.js": "/static/js/614.6d151c0a.chunk.js",
+    "static/js/614.2802180a.chunk.js": "/static/js/614.2802180a.chunk.js",
+    "static/js/925.31512027.chunk.js": "/static/js/925.31512027.chunk.js",
     "static/js/371.2032484b.chunk.js": "/static/js/371.2032484b.chunk.js",
     "static/js/765.a647eee4.chunk.js": "/static/js/765.a647eee4.chunk.js",
     "static/js/536.5826a2fa.chunk.js": "/static/js/536.5826a2fa.chunk.js",
@@ -15,16 +16,17 @@
     "static/media/phonetics.md": "/static/media/phonetics.9d2c75e1a6624cbe9db8.md",
     "static/media/questions_and_answers.md": "/static/media/questions_and_answers.84295759e8d252fbb5a1.md",
     "static/media/sentences.md": "/static/media/sentences.0a182463173b96fee23f.md",
+    "static/media/orders.md": "/static/media/orders.d734589fafe9c7adde69.md",
     "static/media/time_and_tense.md": "/static/media/time_and_tense.37063f711de272a13630.md",
     "index.html": "/index.html",
     "static/media/synopsis.md": "/static/media/synopsis.32abcd88d5a9a5c3c021.md",
     "static/media/basics.md": "/static/media/basics.b7c5330a28e4c6385ef0.md",
     "main.b7518342.css.map": "/static/css/main.b7518342.css.map",
-    "main.a38d9ea3.js.map": "/static/js/main.a38d9ea3.js.map",
+    "main.0ef3cb51.js.map": "/static/js/main.0ef3cb51.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b7518342.css",
-    "static/js/main.a38d9ea3.js"
+    "static/js/main.0ef3cb51.js"
   ]
 }
