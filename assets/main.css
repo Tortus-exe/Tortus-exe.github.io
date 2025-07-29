@@ -1,72 +1,28 @@
-/* App-wide styling */
-body {
-    background-color: #0f1116;
-    color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 20px;
-}
 
-#hero {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#links {
-    width: 400px;
-    text-align: left;
-    font-size: x-large;
-    color: white;
-    display: flex;
-    flex-direction: column;
-}
-
-#links a {
-    color: white;
-    text-decoration: none;
-    margin-top: 20px;
-    margin: 10px 0px;
-    border: white 1px solid;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-#links a:hover {
-    background-color: #1f1f1f;
-    cursor: pointer;
-}
-
-#header {
-    max-width: 1200px;
-}
-
-/* Navbar */
 #navbar {
-    display: flex;
-    flex-direction: row;
-  }
-  
-#navbar a {
-    color: #ffffff;
-    margin-right: 20px;
-    text-decoration: none;
-    transition: color 0.2s ease;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  padding: 1em 1em;
 }
 
-#navbar a:hover {
-    cursor: pointer;
-    color: #91a4d2;
+#navbar-item {
+  padding: 2em 2em;
+  background-color: #000040;
+  text-align: center;
 }
 
-/* Blog page */
-#blog {
-    margin-top: 50px;
-  }
-  
-#blog a {
-    color: #ffffff;
-    margin-top: 50px;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
