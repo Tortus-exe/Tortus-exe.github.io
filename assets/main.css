@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
 
 #navbar {
   margin: auto;
@@ -12,14 +13,27 @@
   text-align: center;
 }
 
+#navbar-button {
+  padding: 1% 2%;
+  margin: 0 0 0 1%;
+  background-color: #000040;
+  text-align: center;
+  font-size: 26;
+}
+
+#navbar-button:hover {
+  background-color: #000080;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Host Grotesk', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
+  color: white;
 }
 
 code {
