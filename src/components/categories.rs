@@ -2,6 +2,19 @@ use dioxus::prelude::*;
 use std::str::FromStr;
 use crate::Route;
 
+const BQN_CATEGORIES: [BlogEntry; 1] = [
+    BlogEntry {asset: crate::articles::bqn::introduction::contents, title: "introduction"},
+];
+
+const CANTONESE_CATEGORIES: [BlogEntry; 6] = [
+    BlogEntry {asset: crate::articles::cantonese::phonetics::contents, title: "phonetics"},
+    BlogEntry {asset: crate::articles::cantonese::sentences::contents, title: "sentences"},
+    BlogEntry {asset: crate::articles::cantonese::time_and_tense::contents, title: "time and tense"},
+    BlogEntry {asset: crate::articles::cantonese::questions_and_answers::contents, title: "questions and answers"},
+    BlogEntry {asset: crate::articles::cantonese::orders::contents, title: "orders, orders!"},
+    BlogEntry {asset: crate::articles::cantonese::numbers::contents, title: "from one to infinity"},
+];
+
 #[derive(PartialEq, Clone, Debug, Copy)]
 pub enum BlogCategory {
     BQN,
@@ -38,28 +51,15 @@ impl std::fmt::Display for ParseCategoryError {
 }
 
 #[derive(Clone, PartialEq)]
-struct BlogEntry {
-    filename: &'static str,
-    title: &'static str,
+pub struct BlogEntry {
+    pub asset: &'static str,
+    pub title: &'static str,
 }
 
-const bqn_categories: [BlogEntry; 1] = [
-    BlogEntry {filename: "introduction.md", title: "introduction"},
-];
-
-const cantonese_categories: [BlogEntry; 6] = [
-    BlogEntry {filename: "phonetics.md", title: "phonetics"},
-    BlogEntry {filename: "sentences.md", title: "sentences"},
-    BlogEntry {filename: "time_and_tense.md", title: "time and tense"},
-    BlogEntry {filename: "questions_and_answers.md", title: "questions and answers"},
-    BlogEntry {filename: "orders.md", title: "orders, orders!"},
-    BlogEntry {filename: "numbers.md", title: "from one to infinity"},
-];
-
-fn GetBlogList(category: &BlogCategory) -> Box<[BlogEntry]> {
+pub fn GetBlogList(category: &BlogCategory) -> Box<[BlogEntry]> {
     match category {
-        BlogCategory::BQN => Box::new(bqn_categories),
-        BlogCategory::Cantonese => Box::new(cantonese_categories),
+        BlogCategory::BQN => Box::new(BQN_CATEGORIES),
+        BlogCategory::Cantonese => Box::new(CANTONESE_CATEGORIES),
     }
 }
 
@@ -72,8 +72,8 @@ pub fn Category(category: BlogCategory) -> Element {
             div {
                 for (num, b) in blog_list.into_iter().enumerate() {
                     CategoryButton { 
-                        blogCategory: category,
-                        blogEntry: b.clone(), 
+                        blog_category: category,
+                        blog_entry: b.clone(), 
                         num: num 
                     }
                 }
@@ -86,15 +86,14 @@ pub fn Category(category: BlogCategory) -> Element {
 }
 
 #[component]
-pub fn CategoryButton(blogCategory: BlogCategory, blogEntry: BlogEntry, num: usize) -> Element {
+fn CategoryButton(blog_category: BlogCategory, blog_entry: BlogEntry, num: usize) -> Element {
     let nav = navigator();
-    // let title = String::from(blogElem.title).clone();
-    let title = blogEntry.title;
+    let title = blog_entry.title;
 
     rsx! {
         button { id: "category_button",
             onclick: move |_| { nav.push(Route::Blog { 
-                category: blogCategory,
+                category: blog_category,
                 name: title.to_string(),
             }); },
             "{num} - {title}"
