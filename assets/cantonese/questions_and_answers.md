@@ -1,26 +1,25 @@
-pub const contents: &str = 
-r#"# What??
+# What??
 
 Questions can be divided into mostly two types: Yes and No questions, and open-ended questions. They are formed differently, so we will speak about each briefly, and end with some practice questions.
 
 ## Yes and No!
 
-To form a yes and no question, we must first know how to negate words. Cantonese has a negation particle \"唔\" (m̖). Placing this before any word will cause it to become a negative!
+To form a yes and no question, we must first know how to negate words. Cantonese has a negation particle "唔" (m̖). Placing this before any word will cause it to become a negative!
 
 - 唔去 (m̖ høi): don't go
 - 唔嚟 (m̖ le̖i): don't come
 - 唔完 (m̖ yv̖n): don't finish
 
-And so, we can form questions by placing the verb next to its negated form. If I want to ask if my unemployed couch-crashing friend is going to go on a walk with me for once, I can ask \"go-not go?\"
+And so, we can form questions by placing the verb next to its negated form. If I want to ask if my unemployed couch-crashing friend is going to go on a walk with me for once, I can ask "go-not go?"
 
 - 去唔去? (høi m̖ høi): will you go?
 
-The lack of an ending particle can make this sound a bit strict, so most people like to add the end particle \"呀\" (aa) to the ends of their questions. This makes it seem more friendly. 
+The lack of an ending particle can make this sound a bit strict, so most people like to add the end particle "呀" (aa) to the ends of their questions. This makes it seem more friendly. 
 
 - 去唔去呀? (høi m̖ høi aa): would you like to go?
 
 Now our roommate friend is not feeling so terrible anymore.
-Please note that when asking about the existence of something, the negative of \"to exist\" (有, ya̗u) is actually irregular. It should not be 唔有, as one might expect, but rather 無 (mo̗u). This character has an alternate form that Cantonese speakers prefer to use: 冇 (also pronounced mo̗u).
+Please note that when asking about the existence of something, the negative of "to exist" (有, ya̗u) is actually irregular. It should not be 唔有, as one might expect, but rather 無 (mo̗u). This character has an alternate form that Cantonese speakers prefer to use: 冇 (also pronounced mo̗u).
 Also note that when a verb has more than one character, such as 可以 (ho̗ yi̗, to be able to), only pair the first character with its negative. See these examples.
 
 - 你有冇信用卡呀? (ne̗i ya̗u mo̗u sø̱n yu̱ng kāat aa): Do you have a credit card?
@@ -113,4 +112,4 @@ So, using these words, try to form the following sentences:
 - Do you want the blue drugs?
 - Are you insane?
 - Are we done?
-- Do you need my credit card? (use 嘅, ga, to denote posession. e.g. 你嘅 = your)"#;
+- Do you need my credit card? (use 嘅, ga, to denote posession. e.g. 你嘅 = your)

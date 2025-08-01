@@ -1,5 +1,4 @@
-pub const contents: &str = 
-r#"# One, two, buckle my shoe
+# One, two, buckle my shoe
 
 Cantonese, like many other asiatic languages, has a special system for numbers:
 
@@ -23,7 +22,7 @@ Cantonese, like many other asiatic languages, has a special system for numbers:
 
 To form a number, we can break it down into its digits. Take, for example, the following number: 1,369,420. 
 We break this number into its components. It is made of 136 ten-thousands, 9 thousands, 4 hundreds, and 2 tens. 
-Thus, the number would be 一百三十六萬九千四百二十 (yāt baak sāam sa̱p lu̱k ma̱an gáu cīn sei baak yi̱ sa̱p), or \"one-hundred three-ten six ten-thousand, nine-thousand four-hundred two-ten\". 
+Thus, the number would be 一百三十六萬九千四百二十 (yāt baak sāam sa̱p lu̱k ma̱an gáu cīn sei baak yi̱ sa̱p), or "one-hundred three-ten six ten-thousand, nine-thousand four-hundred two-ten". 
 
 Based on this, try to form the following numbers:
 - 915
@@ -72,7 +71,7 @@ Try forming these numbers using the rules you now know!
 
 # Counting, counting
 
-Numbers are one thing, but using them practically is another. Unlike in English, counting objects is not as simple as sticking a number next to the noun. In English, we can have \"*one cat*\", \"*three houses*\", or \"*ten cars*\". However, in Cantonese, we need to use *counters*. 
+Numbers are one thing, but using them practically is another. Unlike in English, counting objects is not as simple as sticking a number next to the noun. In English, we can have "*one cat*", "*three houses*", or "*ten cars*". However, in Cantonese, we need to use *counters*. 
 
 The concept of a counter is not absent from English. For example, you might ask for a bottle of water at the corner store, a glass of water at a friend's house, or a stream of water when you're dehydrated in the Sahara. Cantonese uses this sort of thing for every noun: 
 
@@ -101,4 +100,4 @@ Try counting the following:
 - a block of cheese (芝士 means cheese, dzī sí)
 - ten people
 - A blue school
-- three wooden pieces. The wooden pieces were shaved off by a car that nearly hit a telephone pole, resulting in them being long, thin shards that could give you a sliver if you rubbed your hand on them. (木 means wood, mu̱k)"#;
+- three wooden pieces. The wooden pieces were shaved off by a car that nearly hit a telephone pole, resulting in them being long, thin shards that could give you a sliver if you rubbed your hand on them. (木 means wood, mu̱k)

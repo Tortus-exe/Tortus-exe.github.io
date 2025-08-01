@@ -1,7 +1,7 @@
 use dioxus::prelude::*;
 use crate::{BlogCategory, Route};
 
-const default_navbar_elements: [(&str, &Route); 4] = [
+const DEFAULT_NAVBAR_ELEMENTS: [(&str, &Route); 4] = [
     ("Home", &Route::Home {}),
     ("About", &Route::About {}),
     ("BQN", &Route::Category { category: BlogCategory::BQN }),
@@ -12,7 +12,7 @@ const default_navbar_elements: [(&str, &Route); 4] = [
 #[component]
 pub fn Navbar() -> Element {
     let nav = navigator();
-    let buttons = &default_navbar_elements;
+    let buttons = &DEFAULT_NAVBAR_ELEMENTS;
 
     rsx! {
         div {

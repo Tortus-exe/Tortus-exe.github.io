@@ -1,13 +1,12 @@
-pub const contents: &str = 
-r#"# Time and Tenses
+# Time and Tenses
 
 By now, you have learned to form some basic sentences. Congratulations! Let's add some more detail to those sentences by teaching how to say some action occurred in the past or future.
 
-In order to add extra information to a verb, we use modifiers, otherwise known in the linguistic community as \"aspects\". A good example of this in English is the modifier \"*will*\". This modifier makes a verb happen in the future. We will focus on three of the Cantonese modifiers for now:
+In order to add extra information to a verb, we use modifiers, otherwise known in the linguistic community as "aspects". A good example of this in English is the modifier "*will*". This modifier makes a verb happen in the future. We will focus on three of the Cantonese modifiers for now:
 
-- ?𡁵: gán - makes a verb be currently happening. Equivalent to \"-ing\" in English
-- ?咗: jó - makes a verb have happened in the past. Equivalent to \"-ed\" in English
-- 會?: wu̗ui - makes a verb happen in the future. Equivalent to \"will -\" in English
+- ?𡁵: gán - makes a verb be currently happening. Equivalent to "-ing" in English
+- ?咗: jó - makes a verb have happened in the past. Equivalent to "-ed" in English
+- 會?: wu̗ui - makes a verb happen in the future. Equivalent to "will -" in English
 
 Some examples using some verbs you already know:
 - 會去: wu̗ui høi - will go
@@ -43,11 +42,11 @@ In Cantonese, and perhaps in many other languages, simply knowing the tense is n
 - 上年: sœ̱ng nín - last year
 - 下年: ha̱a nín - next year
 
-This is a lot of terms to remember. I will make a visual upon request! To use these terms, simply stick them at the beginning of a sentence, like you would in English. To say \"Next month, I will go to Hong Kong\", you would say: 下個月，我會去香港。
+This is a lot of terms to remember. I will make a visual upon request! To use these terms, simply stick them at the beginning of a sentence, like you would in English. To say "Next month, I will go to Hong Kong", you would say: 下個月，我會去香港。
 
 Try to translate the following sentences to get a feel for how this works!
 
 - This month, I ate rice.
 - I'll go next year! (tip: Sticking a time at the end of a sentence like this needs a trick in Cantonese. How could you change the sentence without changing its meaning so that you can translate it correctly?)
 - I am eating right now.
-- I'm coming over right now."#;
+- I'm coming over right now.

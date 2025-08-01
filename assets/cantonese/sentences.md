@@ -1,5 +1,4 @@
-pub const contents: &str = 
-r#"# Sentences
+# Sentences
 
 Friends of mine often hear me say that Cantonese is the caveman language. Compared to English, that is no mistake: Cantonese sentences often are much simpler than their English counterparts. Consider the following English sentences, their translations, and their word-by-word breakdown.
 
@@ -15,7 +14,7 @@ Friends of mine often hear me say that Cantonese is the caveman language. Compar
 
 No conjugations, no tenses, and no real rules other than where you put words. Easy! So, how do we string words together?
 
-Cantonese sentences follow a SVO pattern. That is, Subject-Verb-Object. In layman's terms, it is the exact same as English. If in English you would say \"I went to the store\", you would say \"我去咗鋪頭\" in Cantonese. Since the word order is the same, \"我\" means \"I\", \"去咗\" means \"went\", and \"鋪頭\" means \"store\". Easy!
+Cantonese sentences follow a SVO pattern. That is, Subject-Verb-Object. In layman's terms, it is the exact same as English. If in English you would say "I went to the store", you would say "我去咗鋪頭" in Cantonese. Since the word order is the same, "我" means "I", "去咗" means "went", and "鋪頭" means "store". Easy!
 
 Here are some useful words:
 
@@ -44,4 +43,4 @@ Using these words, can you construct the following sentences?
 - They eat presents.
 
 Don't overthink it. Plural forms and articles don't exist in Cantonese, unlike in English. 
-Though it may not be practical for one to know how to say \"Those things go to presents\", it certainly is funny. What other funny sentences can you make with these words?"#;
+Though it may not be practical for one to know how to say "Those things go to presents", it certainly is funny. What other funny sentences can you make with these words?

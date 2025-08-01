@@ -1,5 +1,4 @@
-pub const contents: &str = 
-r#"## Imperatives
+## Imperatives
 
 We could ask people kindly to do things for us, or we could very strongly emphasize how much we need something done. To do this, we use the imperative form to tell others to do something. 
 To form the imperative, we can simply stick the particle 啦 (lāa) at the end of a sentence. Magically, the sentence will be interpreted as a command to do something.
@@ -37,9 +36,9 @@ Try translating the same three imperatives into a more forceful form.
 
 # Be nice!
 
-Finally, we can be a bit more kind by placing 唔該 (m̖ gōi), meaning \"please\" in front of our imperatives. For example: 
+Finally, we can be a bit more kind by placing 唔該 (m̖ gōi), meaning "please" in front of our imperatives. For example: 
 
 - 唔該你去買奶啦. (m̖ gōi ne̗i høi ma̗ai na̗ai lāa): please go buy milk.
 
 Note that this can also be taken to be a bit sarcastic, much like English. So be careful.
-Try translating the same three imperatives into a more... kind form."#;
+Try translating the same three imperatives into a more... kind form.

@@ -3,16 +3,16 @@ use std::str::FromStr;
 use crate::Route;
 
 const BQN_CATEGORIES: [BlogEntry; 1] = [
-    BlogEntry {asset: crate::articles::bqn::introduction::contents, title: "introduction"},
+    BlogEntry {asset: asset!("/assets/bqn/introduction.md"), title: "introduction"},
 ];
 
 const CANTONESE_CATEGORIES: [BlogEntry; 6] = [
-    BlogEntry {asset: crate::articles::cantonese::phonetics::contents, title: "phonetics"},
-    BlogEntry {asset: crate::articles::cantonese::sentences::contents, title: "sentences"},
-    BlogEntry {asset: crate::articles::cantonese::time_and_tense::contents, title: "time and tense"},
-    BlogEntry {asset: crate::articles::cantonese::questions_and_answers::contents, title: "questions and answers"},
-    BlogEntry {asset: crate::articles::cantonese::orders::contents, title: "orders, orders!"},
-    BlogEntry {asset: crate::articles::cantonese::numbers::contents, title: "from one to infinity"},
+    BlogEntry {asset: asset!("/assets/cantonese/phonetics.md"), title: "phonetics"},
+    BlogEntry {asset: asset!("/assets/cantonese/sentences.md"), title: "sentences"},
+    BlogEntry {asset: asset!("/assets/cantonese/time_and_tense.md"), title: "time and tense"},
+    BlogEntry {asset: asset!("/assets/cantonese/questions_and_answers.md"), title: "questions and answers"},
+    BlogEntry {asset: asset!("/assets/cantonese/orders.md"), title: "orders, orders!"},
+    BlogEntry {asset: asset!("/assets/cantonese/numbers.md"), title: "from one to infinity"},
 ];
 
 #[derive(PartialEq, Clone, Debug, Copy)]
@@ -45,18 +45,17 @@ impl ToString for BlogCategory {
 
 impl std::fmt::Display for ParseCategoryError {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> { 
-        write!(f, "Category parse error!");
-        Ok(())
+        write!(f, "Category parse error!")
     }
 }
 
 #[derive(Clone, PartialEq)]
 pub struct BlogEntry {
-    pub asset: &'static str,
+    pub asset: Asset,
     pub title: &'static str,
 }
 
-pub fn GetBlogList(category: &BlogCategory) -> Box<[BlogEntry]> {
+pub fn get_blog_list(category: &BlogCategory) -> Box<[BlogEntry]> {
     match category {
         BlogCategory::BQN => Box::new(BQN_CATEGORIES),
         BlogCategory::Cantonese => Box::new(CANTONESE_CATEGORIES),
@@ -65,12 +64,12 @@ pub fn GetBlogList(category: &BlogCategory) -> Box<[BlogEntry]> {
 
 #[component]
 pub fn Category(category: BlogCategory) -> Element {
-    let blog_list = GetBlogList(&category);
+    let blog_list = get_blog_list(&category);
 
     rsx! {
         div { id: "category_listing",
             div {
-                for (num, b) in blog_list.into_iter().enumerate() {
+                for (num, b) in blog_list.iter().enumerate() {
                     CategoryButton { 
                         blog_category: category,
                         blog_entry: b.clone(), 

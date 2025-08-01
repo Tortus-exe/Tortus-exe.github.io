@@ -9,14 +9,13 @@ edition = "2021"
 [dependencies]
 dioxus = { version = "0.6.0", features = ["router"] }
 dioxus-markdown = "0.0.1"
+gloo-net = { version = "0.6.0", features = ["http"] }
 
 [features]
 default = ["web"]
 web = ["dioxus/web"]
 desktop = ["dioxus/desktop"]
 mobile = ["dioxus/mobile"]
-
-[profile]
 
 [profile.wasm-dev]
 inherits = "dev"
