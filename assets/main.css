@@ -1,30 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
 
+#navbar-preview-element {
+  height: 0;
+  width: 100%;
+  padding-bottom: 100%;
+}
+
 #navbar {
   margin: auto;
   width: 50%;
   text-align: center;
-  padding: 1em 1em;
+  padding: 0em 0em;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
-#navbar-item {
-  padding: 2em 2em;
-  background-color: #000040;
-  text-align: center;
-}
-
-#navbar-button {
-  padding: 1% 2%;
-  margin: 0 0 0 1%;
+.navbar-button {
   background-color: #000040;
   text-align: center;
   font-size: 26;
   color: white;
 }
 
-#navbar-button:hover {
+.navbar-button:hover {
   background-color: #000080;
+}
+
+
+#navbar-parent {
+  display: flex;
+  flex-direction: row;
+}
+
+#body-contents {
+  padding: 1%; 
 }
 
 body {
@@ -37,6 +47,8 @@ body {
   background-color: #112;
   color: white;
 }
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

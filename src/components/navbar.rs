@@ -1,9 +1,13 @@
 use dioxus::prelude::*;
 use crate::{BlogCategory, Route};
 
-const DEFAULT_NAVBAR_ELEMENTS: [(&str, &Route); 4] = [
+const DEFAULT_NAVBAR_ELEMENTS: [(&str, &Route); 8] = [
     ("Home", &Route::Home {}),
     ("About", &Route::About {}),
+    ("Skills", &Route::Skills {}),
+    ("Articles", &Route::Articles {}),
+    ("Projects", &Route::Projects {}),
+    ("Contact", &Route::Contact {}),
     ("BQN", &Route::Category { category: BlogCategory::BQN }),
     ("Cantonese", &Route::Category { category: BlogCategory::Cantonese }),
 ];
@@ -15,16 +19,22 @@ pub fn Navbar() -> Element {
     let buttons = &DEFAULT_NAVBAR_ELEMENTS;
 
     rsx! {
-        div {
-            id: "navbar",
-            for &(name, route) in buttons.iter() {
-                button { id: "navbar-button",
-                    onclick: move |_| { nav.push(route.clone()); },
-                    "{name}"
+        div { id: "navbar-parent",
+            div { id: "navbar",
+                div { id: "navbar-preview-element"
+                    
                 }
+                for &(name, route) in buttons.iter() {
+                    button { class: "navbar-button",
+                        onclick: move |_| { nav.push(route.clone()); },
+                        "{name}"
+                    }
+                }
+            }
+            div { id: "body-contents",
+                Outlet::<Route> {}
             }
         }
 
-        Outlet::<Route> {}
     }
 }
