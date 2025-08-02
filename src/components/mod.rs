@@ -2,3 +2,8 @@ pub mod categories;
 pub mod about;
 pub mod blog;
 pub mod navbar;
+pub mod home;
+pub mod articles;
+pub mod skills;
+pub mod projects;
+pub mod contact;

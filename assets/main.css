@@ -5,6 +5,7 @@
   width: 50%;
   text-align: center;
   padding: 1em 1em;
+  color: white;
 }
 
 #navbar-item {
@@ -19,6 +20,7 @@
   background-color: #000040;
   text-align: center;
   font-size: 26;
+  color: white;
 }
 
 #navbar-button:hover {
@@ -32,11 +34,74 @@ body {
   font-size: 20;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  background-color: #112;
   color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.homepage_code {
+  margin-left: 5%;
+}
+
+.homepage_code *{
+  font-family: monospace;
+  display: inline;
+  white-space: pre-wrap;
+  font-size: 40;
+}
+
+.homepage_code button {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;        
+}
+
+.homepage_code > button#about_home:hover {
+  background-color: #100;
+}
+
+.homepage_code > button#projects_home:hover {
+  background-color: #010;
+}
+
+.homepage_code > button#skills_home:hover {
+  background-color: #001;
+}
+
+.homepage_code > button#articles_home:hover {
+  background-color: #200f00;
+}
+
+.homepage_code > button#contact_home:hover {
+  background-color: #101;
+}
+
+.grayed_out {
+  color: #555;
+}
+
+.homepage_code > #about_home {
+  color: #c10;
+}
+
+.homepage_code > #projects_home {
+  color: #8b0;
+}
+
+.homepage_code > #skills_home {
+  color: #03a;
+}
+
+.homepage_code > #articles_home {
+  color: #ea0;
+}
+
+.homepage_code > #contact_home {
+  color: #82b;
 }

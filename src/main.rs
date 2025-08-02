@@ -1,22 +1,36 @@
 mod components;
 use dioxus::prelude::*;
-use components::categories::{Category, BlogCategory};
-use components::about::About;
-use components::blog::Blog;
-use components::navbar::{Navbar};
+use components::{
+    categories::{Category, BlogCategory},
+    about::About,
+    blog::Blog,
+    navbar::Navbar,
+    home::Home,
+    articles::Articles,
+    skills::Skills,
+    projects::Projects,
+    contact::Contact};
 
 #[derive(Debug, Clone, Routable, PartialEq)]
 #[rustfmt::skip]
 enum Route {
-    #[layout(Navbar)]
     #[route("/")]
     Home {},
-    #[route("/about")]
-    About {},
-    #[route("/category/:category")]
-    Category { category: BlogCategory },
-    #[route("/blog/:category/:name")]
-    Blog { category: BlogCategory, name: String },
+    #[layout(Navbar)]
+        #[route("/about")]
+        About {},
+        #[route("/skills")]
+        Skills {},
+        #[route("/articles")]
+        Articles {},
+        #[route("/projects")]
+        Projects {},
+        #[route("/contact")]
+        Contact {},
+        #[route("/category/:category")]
+        Category { category: BlogCategory },
+        #[route("/blog/:category/:name")]
+        Blog { category: BlogCategory, name: String },
 }
 
 const FAVICON: Asset = asset!("/assets/favicon.ico");
@@ -34,12 +48,3 @@ fn App() -> Element {
         Router::<Route> {}
     }
 }
-
-/// Home page
-#[component]
-fn Home() -> Element {
-    rsx! {
-        "Hello! This page is still under construction. Please come back later to learn more!"
-    }
-}
-

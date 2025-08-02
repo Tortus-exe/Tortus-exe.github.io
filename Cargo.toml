@@ -9,6 +9,7 @@ edition = "2021"
 [dependencies]
 dioxus = { version = "0.6.0", features = ["router"] }
 dioxus-markdown = "0.0.1"
+getrandom = { version = "0.3.3", features = ["wasm_js"] }
 gloo-net = { version = "0.6.0", features = ["http"] }
 
 [features]
@@ -20,9 +21,13 @@ mobile = ["dioxus/mobile"]
 [profile.wasm-dev]
 inherits = "dev"
 opt-level = 1
+# RUSTFLAGS='--cfg getrandom_backend="wasm_js"'
 
 [profile.server-dev]
 inherits = "dev"
 
 [profile.android-dev]
 inherits = "dev"
+
+[target.wasm32-unknown-unknown]
+rustflags = ['--cfg', 'getrandom_backend="wasm_js"']
