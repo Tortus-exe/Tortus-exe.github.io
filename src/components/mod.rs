@@ -7,3 +7,4 @@ pub mod articles;
 pub mod skills;
 pub mod projects;
 pub mod contact;
+pub mod projectpage;

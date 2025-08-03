@@ -9,6 +9,7 @@ use components::{
     articles::Articles,
     skills::Skills,
     projects::Projects,
+    projectpage::ProjectPage,
     contact::Contact};
 
 #[derive(Debug, Clone, Routable, PartialEq)]
@@ -31,6 +32,8 @@ enum Route {
         Category { category: BlogCategory },
         #[route("/blog/:category/:name")]
         Blog { category: BlogCategory, name: String },
+        #[route("/projects/:title")]
+        ProjectPage { title: String },
 }
 
 const FAVICON: Asset = asset!("/assets/favicon.ico");

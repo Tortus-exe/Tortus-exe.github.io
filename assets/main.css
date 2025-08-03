@@ -44,6 +44,56 @@
   width: 80vw;
 }
 
+
+
+.project-preview {
+  width: 95%;
+  max-width: 400px;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.project-preview:hover {
+  background-color: #003;
+}
+
+.project-preview-img {
+  max-width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  aspect-ratio: 2;
+}
+
+.project-preview-title {
+  font-size: 200%;
+  margin: 0;
+}
+
+.project-preview-description {
+  font-size: 100%;
+  color: #888;
+  margin-bottom: 2%;
+}
+
+.project-icon {
+  max-width: 12%;
+  aspect-ratio: 1;
+  float: right;
+  margin: 1%;
+}
+
+#project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  /* what the FUCK does auto fit do */
+}
+
+
+
 .blog img {
   width: 100%;
 }
@@ -111,7 +161,13 @@ code {
   font-family: monospace;
   display: inline;
   white-space: pre-wrap;
-  font-size: 40;
+  font-size: 4vw;
+}
+
+@media screen and (min-width: 1000px) {
+  .homepage_code *{
+    font-size: 40px;
+  }
 }
 
 .homepage_code button {

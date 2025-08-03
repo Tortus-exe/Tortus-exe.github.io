@@ -3,9 +3,6 @@ use dioxus_markdown::Markdown;
 use crate::components::categories::{BlogCategory, get_blog_list};
 use gloo_net::http::Request;
 
-/// use_asset_handler() -> LOOK INTO
-/// THIS MAY NOT WORK IN 0.6.0. PLEASE CHECK.
-
 /// Blog page
 #[component]
 pub fn Blog(category: BlogCategory, name: String) -> Element {
