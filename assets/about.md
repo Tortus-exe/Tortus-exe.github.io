@@ -8,7 +8,7 @@ I speak English, Cantonese, and Japanese. I am a native English speaker (as you 
 
 Feel free to peruse the projects on my [github](https://www.github.com/tortus-exe).
 
-Oh yeah... right. The website. This website used to be written in JSX and REact, but then I discovered [dioxus](https://dioxuslabs.com/). Boy... Dioxus just feels a bit like a better, faster, typechecked React to me so far, so I'm hoping it will revolutionize my website development. Apologies to those who were hoping to see blogs and projects; they will be up soon!
+Oh yeah... right. The website. This website used to be written in JSX and React, but then I discovered [dioxus](https://dioxuslabs.com/). Boy... Dioxus just feels a bit like a better, faster, typechecked React to me so far, so I'm hoping it will revolutionize my website development. Apologies to those who were hoping to see blogs and projects; they will be up soon!
 
 See you on the flipside!
 

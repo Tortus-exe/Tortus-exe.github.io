@@ -1,18 +1,19 @@
 use dioxus::prelude::*;
 use std::str::FromStr;
 use crate::Route;
+use crate::components::articles::{ CategoryPreview, ImageSource };
 
 const BQN_CATEGORIES: [BlogEntry; 1] = [
-    BlogEntry {asset: asset!("/assets/bqn/introduction.md"), title: "introduction"},
+    BlogEntry {asset: asset!("/assets/bqn/introduction.md"), title: "introduction", thumbnail: ImageSource::A(asset!("/assets/images/bqn.png"))},
 ];
 
 const CANTONESE_CATEGORIES: [BlogEntry; 6] = [
-    BlogEntry {asset: asset!("/assets/cantonese/phonetics.md"), title: "phonetics"},
-    BlogEntry {asset: asset!("/assets/cantonese/sentences.md"), title: "sentences"},
-    BlogEntry {asset: asset!("/assets/cantonese/time_and_tense.md"), title: "time and tense"},
-    BlogEntry {asset: asset!("/assets/cantonese/questions_and_answers.md"), title: "questions and answers"},
-    BlogEntry {asset: asset!("/assets/cantonese/orders.md"), title: "orders, orders!"},
-    BlogEntry {asset: asset!("/assets/cantonese/numbers.md"), title: "from one to infinity"},
+    BlogEntry {asset: asset!("/assets/cantonese/phonetics.md"), title: "phonetics", thumbnail: ImageSource::A(asset!("/assets/images/cantonese.png"))},
+    BlogEntry {asset: asset!("/assets/cantonese/sentences.md"), title: "sentences", thumbnail: ImageSource::A(asset!("/assets/images/cantonese.png"))},
+    BlogEntry {asset: asset!("/assets/cantonese/time_and_tense.md"), title: "time and tense", thumbnail: ImageSource::A(asset!("/assets/images/cantonese.png"))},
+    BlogEntry {asset: asset!("/assets/cantonese/questions_and_answers.md"), title: "questions and answers", thumbnail: ImageSource::A(asset!("/assets/images/cantonese.png"))},
+    BlogEntry {asset: asset!("/assets/cantonese/orders.md"), title: "orders, orders!", thumbnail: ImageSource::A(asset!("/assets/images/cantonese.png"))},
+    BlogEntry {asset: asset!("/assets/cantonese/numbers.md"), title: "from one to infinity", thumbnail: ImageSource::A(asset!("/assets/images/cantonese.png"))},
 ];
 
 #[derive(PartialEq, Clone, Debug, Copy)]
@@ -53,6 +54,7 @@ impl std::fmt::Display for ParseCategoryError {
 pub struct BlogEntry {
     pub asset: Asset,
     pub title: &'static str,
+    pub thumbnail: ImageSource,
 }
 
 pub fn get_blog_list(category: &BlogCategory) -> Box<[BlogEntry]> {
@@ -73,12 +75,9 @@ pub fn Category(category: BlogCategory) -> Element {
                     CategoryButton { 
                         blog_category: category,
                         blog_entry: b.clone(), 
-                        num: num 
+                        num: num,
                     }
                 }
-            }
-            div {
-                
             }
         }
     }
@@ -90,12 +89,13 @@ fn CategoryButton(blog_category: BlogCategory, blog_entry: BlogEntry, num: usize
     let title = blog_entry.title;
 
     rsx! {
-        button { id: "category_button",
+        CategoryPreview {
             onclick: move |_| { nav.push(Route::Blog { 
                 category: blog_category,
                 name: title.to_string(),
             }); },
-            "{num} - {title}"
+            name: "{num} - {title}",
+            source: blog_entry.thumbnail
         }
     }
 }

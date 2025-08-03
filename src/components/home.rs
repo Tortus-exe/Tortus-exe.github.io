@@ -109,7 +109,7 @@ pub fn Home() -> Element {
             p {class: "grayed_out", "{code[text].pre_skills}"}
             button {onclick: move |_| {nav.push(Route::Skills {});}, class: "grayed_out", id: "skills_home", "{code[text].skills}"}
             p {class: "grayed_out", "{code[text].pre_articles}"}
-            button {onclick: move |_| {nav.push(Route::Category {category: BlogCategory::Cantonese});}, class: "grayed_out", id: "articles_home", "{code[text].articles}"}
+            button {onclick: move |_| {nav.push(Route::Articles {});}, class: "grayed_out", id: "articles_home", "{code[text].articles}"}
             p {class: "grayed_out", "{code[text].pre_contact}"}
             button {onclick: move |_| {nav.push(Route::Contact {});}, class: "grayed_out", id: "contact_home", "{code[text].contact}"}
             p {class: "grayed_out", "{code[text].tail}"}

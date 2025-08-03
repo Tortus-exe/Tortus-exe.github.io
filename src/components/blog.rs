@@ -35,7 +35,7 @@ fn blog_if_exists(filename: String) -> Element {
     }});
 
     rsx! {
-        div { id: "blog",
+        div { class: "blog",
             Markdown {
                 src: "{contents}"
             }

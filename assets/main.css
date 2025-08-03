@@ -8,12 +8,16 @@
 
 #navbar {
   margin: auto;
-  width: 50%;
-  text-align: center;
+  width: 50vw;
+  /* text-align: center;*/
   padding: 0em 0em;
   color: white;
   display: flex;
   flex-direction: column;
+  position: sticky;
+  position: -webkit-sticky;
+  align-self: flex-start;
+  justify-content: flex-start;
 }
 
 .navbar-button {
@@ -31,10 +35,54 @@
 #navbar-parent {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
 }
 
 #body-contents {
   padding: 1%; 
+  min-width: 80vw;
+  width: 80vw;
+}
+
+.blog img {
+  width: 100%;
+}
+
+.category-preview {
+  display: flex;
+  flex-direction: row;
+  background-color: #000;
+  max-height: 10vh;
+  margin-bottom: 20px;
+  user-select: none;
+  border-radius: 25px;
+  border: 2px solid #ccc;
+  overflow: hidden;
+}
+
+.category-preview:hover {
+  background-color: #114;
+}
+
+.category-preview-img {
+  overflow: hidden;
+  object-fit: cover;
+  width: 300px;
+  max-width: 10%;
+  user-select: none;
+}
+
+.category-preview-title {
+  margin-left: 10px;
+  font-size: 40px;
+  user-select: none;
+  margin-top: 0;
+  margin-bottom: 0px;
+  object-fit: contain;
+}
+
+.category-preview:hover .category-preview-title {
+  font-size: 60px;
 }
 
 body {

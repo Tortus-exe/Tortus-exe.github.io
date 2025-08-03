@@ -1,15 +1,13 @@
 use dioxus::prelude::*;
 use crate::{BlogCategory, Route};
 
-const DEFAULT_NAVBAR_ELEMENTS: [(&str, &Route); 8] = [
+const DEFAULT_NAVBAR_ELEMENTS: [(&str, &Route); 6] = [
     ("Home", &Route::Home {}),
     ("About", &Route::About {}),
     ("Skills", &Route::Skills {}),
     ("Articles", &Route::Articles {}),
     ("Projects", &Route::Projects {}),
     ("Contact", &Route::Contact {}),
-    ("BQN", &Route::Category { category: BlogCategory::BQN }),
-    ("Cantonese", &Route::Category { category: BlogCategory::Cantonese }),
 ];
 
 /// Shared navbar component.
