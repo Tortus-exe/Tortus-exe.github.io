@@ -1,7 +1,7 @@
 use dioxus::prelude::*;
 use dioxus_markdown::Markdown;
 use crate::components::articles::ImageSource;
-use crate::components::projects::{ProjectPageData, get_project_page_data, ProjectProperties};
+use crate::components::projects::{ProjectPageData, get_project_page_data, ProjectProperties, BackgroundInfo};
 use gloo_net::http::Request;
 
 #[component]
@@ -14,9 +14,23 @@ pub fn ProjectPage(title: String) -> Element {
             }
         },
         |d| rsx! {
+        {d.background.clone().map(|bg| {
+        rsx!{
+            document::Style {
+                r#"
+                    body:has(.project) {{
+                        background-color: {bg.color};
+                    }}
+                "#
+            }
+            {bg.symbol.map(|imgsrc| rsx! {
+              img { class: "project-page-symbol-image",
+                src: "{imgsrc}"
+              }
+            })}
+        }})}
         ProjectPageTemplate {
             filename: d.filename.to_string(),
-            background: d.background.clone(), 
             icon: d.icon.clone(), 
             projprops: &d.projprops,
         }
@@ -24,7 +38,7 @@ pub fn ProjectPage(title: String) -> Element {
 }
 
 #[component]
-fn ProjectPageTemplate(filename: String, background: Option<ImageSource>, icon: Option<ImageSource>, projprops: &'static ProjectProperties) -> Element {
+fn ProjectPageTemplate(filename: String, icon: Option<ImageSource>, projprops: &'static ProjectProperties) -> Element {
     let mut contents = use_signal(|| "".to_string());
     use_future(move || {
         let fnameclone = filename.clone();
@@ -39,12 +53,12 @@ fn ProjectPageTemplate(filename: String, background: Option<ImageSource>, icon: 
             }
         }
     });
-    let urlString: String = background.clone().map_or("".to_string(), 
-            |bg| { bg.to_string() });
 
     rsx! {
         div { class: "project",
-            style: "background-image: url('{urlString}');",
+            ProjectPropertyDisplay {
+                projprops: projprops
+            }
             {icon.map(|src| rsx! {
                 img { class: "project-page-icon",
                     src: "{src}"
@@ -52,9 +66,6 @@ fn ProjectPageTemplate(filename: String, background: Option<ImageSource>, icon: 
             })}
             Markdown {
                 src: "{contents}",
-            }
-            ProjectPropertyDisplay {
-                projprops: projprops
             }
         }
     }
@@ -65,8 +76,16 @@ pub fn ProjectPropertyDisplay(projprops: &'static ProjectProperties) -> Element 
     rsx! {
         div { class: "project-properties",
             {projprops.language.map(|lang| rsx! {
-                p { class: "proj-lang", "language: {lang}" }
-            })}
+                p { class: "proj-lang", "language: {lang}" } } ) }
+            {projprops.link.map(|link| rsx! {
+                p { class: "proj-link", "source: " 
+                    a { href: "{link}", "{link}" }
+                } } ) }
+            {projprops.status.map(|stat| rsx! {
+                p { class: "proj-status", "status: {stat}" } } ) }
+            {projprops.collabs.map(|c| rsx! {
+                p { class: "proj-collabs", "in collaboration with: {c}" } }
+            )}
         }
     }
 }

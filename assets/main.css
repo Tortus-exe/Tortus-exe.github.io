@@ -46,6 +46,22 @@
 
 
 
+.project-properties {
+  border: 2px solid white;
+  padding: 1%;
+  background-color: #00000033;
+}
+
+.project-properties p {
+  margin: 0;
+  font-family: 
+}
+
+.project-page-icon {
+  width: 5%;
+  max-width: 100px;
+}
+
 .project-preview {
   width: 95%;
   max-width: 400px;
@@ -89,7 +105,14 @@
 #project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-  /* what the FUCK does auto fit do */
+}
+
+.project-page-symbol-image {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  z-index: -1;
 }
 
 
@@ -148,7 +171,7 @@ body {
 
 
 
-code {
+.project-properties *, code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
