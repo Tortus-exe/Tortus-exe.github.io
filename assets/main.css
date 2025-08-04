@@ -4,20 +4,21 @@
   height: 0;
   width: 100%;
   padding-bottom: 100%;
+  top: 0;
+  position: sticky;
 }
 
 #navbar {
-  margin: auto;
   width: 50vw;
-  /* text-align: center;*/
-  padding: 0em 0em;
+  padding: 0;
   color: white;
   display: flex;
   flex-direction: column;
   position: sticky;
   position: -webkit-sticky;
-  align-self: flex-start;
-  justify-content: flex-start;
+  align-items: flex-start;
+  top: 0;
+  vertical-align: 0;
 }
 
 .navbar-button {
@@ -25,6 +26,9 @@
   text-align: center;
   font-size: 26;
   color: white;
+  top: 0;
+  position: sticky;
+  width: 100%;
 }
 
 .navbar-button:hover {
@@ -36,6 +40,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  position: sticky;
 }
 
 #body-contents {
