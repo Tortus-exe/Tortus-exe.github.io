@@ -1,7 +1,9 @@
 # Welcome!
 
 So you actually would like to learn some Cantonese? Out of all the languages you could have chosen, you chose one of the most difficult languages for English speakers to learn?
+
 You must either hate yourself, really love languages, or both.
+
 Let's learn a bit about how this language works.
 Also - I heard once that there would be concerns of tone-deaf people learning this language. YOU CAN DO IT TOO. You might have to work towards it a bit, but *you can do it*. 
 

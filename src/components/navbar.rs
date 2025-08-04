@@ -15,24 +15,39 @@ const DEFAULT_NAVBAR_ELEMENTS: [(&str, &Route); 6] = [
 pub fn Navbar() -> Element {
     let nav = navigator();
     let buttons = &DEFAULT_NAVBAR_ELEMENTS;
+    let mut hidden = use_signal(|| true);
 
     rsx! {
-        div { id: "navbar-parent",
-            div { id: "navbar",
-                div { id: "navbar-preview-element"
-                    
+        div { class: "navbar-mobile-parent",
+            div { class: "menu-bar-button",
+                img { id: "menu-button-image",
+                    onclick: move |_| {
+                        hidden.set(!hidden());
+                    },
+                    src: asset!("/assets/images/menu-button-mobile.png")
                 }
-                for &(name, route) in buttons.iter() {
-                    button { class: "navbar-button",
-                        onclick: move |_| { nav.push(route.clone()); },
-                        "{name}"
+            }
+            div { id: "navbar-parent",
+                div { class: {if hidden() {{"hide-on-mobile"}} else {{""}}}, id: "navbar",
+                    div { class: "hide-on-mobile",
+                        id: "navbar-preview-element"
+                        
+                    }
+                    for &(name, route) in buttons.iter() {
+                        button { class: "navbar-button",
+                            onclick: move |_| { 
+                                hidden.set(!hidden());
+                                nav.push(route.clone()); 
+                            },
+                            "{name}"
+                        }
                     }
                 }
-            }
-            div { id: "body-contents",
-                Outlet::<Route> {}
+                div { class: {if hidden() {{""}} else {{"hide-on-mobile"}}} ,
+                    id: "body-contents",
+                    Outlet::<Route> {}
+                }
             }
         }
-
     }
 }

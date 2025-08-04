@@ -8,17 +8,42 @@
   position: sticky;
 }
 
-#navbar {
-  width: 50vw;
-  padding: 0;
-  color: white;
+@media (min-width: 500px) {
+  #navbar {
+    width: 50vw;
+    padding: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    position: -webkit-sticky;
+    align-items: flex-start;
+    top: 0;
+    vertical-align: 0;
+  }
+
+  .menu-bar-button {
+    display: none;
+  }
+}
+
+@media (max-width: 500px)  {
+  .hide-on-mobile {
+    display: none;
+  }
+
+  #menu-button-image {
+    width: 100%;
+  }
+
+  .menu-bar-button {
+    position: sticky;
+  }
+}
+
+.navbar-mobile-parent {
   display: flex;
   flex-direction: column;
-  position: sticky;
-  position: -webkit-sticky;
-  align-items: flex-start;
-  top: 0;
-  vertical-align: 0;
 }
 
 .navbar-button {
