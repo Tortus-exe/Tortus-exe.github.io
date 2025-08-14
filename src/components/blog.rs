@@ -1,7 +1,7 @@
 use dioxus::prelude::*;
 use dioxus_markdown::Markdown;
 use crate::components::categories::{BlogCategory, get_blog_list};
-use gloo_net::http::Request;
+use crate::utils::getAsset::getAsset;
 
 /// Blog page
 #[component]
@@ -21,13 +21,10 @@ fn blog_if_exists(filename: String) -> Element {
     use_future(move || {
         let fnameclone = filename.clone();
         async move {
-            let response = Request::get(&fnameclone)
-                .send()
-                .await.unwrap();
-            if response.ok() {
-                contents.set(response.text().await.unwrap())
-            } else {
-                contents.set(response.status_text());
+            let result = getAsset(fnameclone).await;
+            match(result) {
+                Ok(response) => contents.set(response),
+                Err(error) => contents.set(error)
             }
     }});
 

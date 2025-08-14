@@ -1,17 +1,16 @@
 use dioxus::prelude::*;
-use gloo_net::http::Request;
 use dioxus_markdown::Markdown;
+use crate::utils::getAsset::getAsset;
 
 #[component]
 pub fn About() -> Element {
     let mut about_text = use_signal(|| "".to_string());
     use_future(move || async move {
-        let about_text_fut = Request::get(asset!("/assets/about.md").to_string().as_str()).send();
-        let response = about_text_fut.await.unwrap();
-        if response.ok() {
-            about_text.set(response.text().await.unwrap());
-        } else {
-            about_text.set(response.status_text());
+        let about_text_name = asset!("/assets/about.md").to_string();
+        let result = getAsset(about_text_name).await;
+        match(result) {
+            Ok(response) => about_text.set(response),
+            Err(error) => about_text.set(error)
         }
     });
 

@@ -2,7 +2,7 @@ use dioxus::prelude::*;
 use dioxus_markdown::Markdown;
 use crate::components::articles::ImageSource;
 use crate::components::projects::{ProjectPageData, get_project_page_data, ProjectProperties, BackgroundInfo};
-use gloo_net::http::Request;
+use crate::utils::getAsset::getAsset;
 
 #[component]
 pub fn ProjectPage(title: String) -> Element {
@@ -43,13 +43,10 @@ fn ProjectPageTemplate(filename: String, icon: Option<ImageSource>, projprops: &
     use_future(move || {
         let fnameclone = filename.clone();
         async move {
-            let response = Request::get(&fnameclone)
-                .send()
-                .await.unwrap();
-            if response.ok() {
-                contents.set(response.text().await.unwrap())
-            } else {
-                contents.set(response.status_text());
+            let result = getAsset(fnameclone).await;
+            match(result) {
+                Ok(response) => contents.set(response),
+                Err(error) => contents.set(error)
             }
         }
     });

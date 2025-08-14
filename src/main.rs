@@ -1,4 +1,5 @@
 mod components;
+mod utils;
 use dioxus::prelude::*;
 use components::{
     categories::{Category, BlogCategory},
