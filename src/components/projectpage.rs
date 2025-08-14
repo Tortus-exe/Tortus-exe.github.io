@@ -30,7 +30,7 @@ pub fn ProjectPage(title: String) -> Element {
             })}
         }})}
         ProjectPageTemplate {
-            filename: d.filename.to_string(),
+            filename: d.filename,
             icon: d.icon.clone(), 
             projprops: &d.projprops,
         }
@@ -38,7 +38,7 @@ pub fn ProjectPage(title: String) -> Element {
 }
 
 #[component]
-fn ProjectPageTemplate(filename: String, icon: Option<ImageSource>, projprops: &'static ProjectProperties) -> Element {
+fn ProjectPageTemplate(filename: Asset, icon: Option<ImageSource>, projprops: &'static ProjectProperties) -> Element {
     let mut contents = use_signal(|| "".to_string());
     use_future(move || {
         let fnameclone = filename.clone();
