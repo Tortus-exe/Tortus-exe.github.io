@@ -43,7 +43,7 @@ pub struct ProjectPageData {
     pub projprops: ProjectProperties
 }
 
-const PROJECTS: [ProjectPageData;1] = [
+const PROJECTS: [ProjectPageData;2] = [
     ProjectPageData {
         image: ImageSource::A(asset!("/assets/images/stackVMBG.png")),
         title: "StackVM",
@@ -58,6 +58,24 @@ const PROJECTS: [ProjectPageData;1] = [
         projprops: ProjectProperties {
             language: Some("C"),
             link: Some("https://github.com/Tortus-exe/stackvm"),
+            status: Some("completed"),
+            collabs: None
+        }
+    },
+    ProjectPageData {
+        image: ImageSource::A(asset!("/assets/images/verimacro.png")),
+        title: "VeriMacro",
+        desc: "A macro expander for Verilog! Targets the linux and mac desktops.",
+        icon: None,
+        route: ProjectRouting::Template("VeriMacro"),
+        filename: asset!("/assets/projects/verimacro.md"),
+        background: Some(BackgroundInfo {
+            color: "#202020",
+            symbol: Some(ImageSource::A(asset!("/assets/images/verimacro.png")))
+        }),
+        projprops: ProjectProperties {
+            language: Some("Haskell"),
+            link: Some("https://github.com/Tortus-exe/Verimacro"),
             status: Some("completed"),
             collabs: None
         }
