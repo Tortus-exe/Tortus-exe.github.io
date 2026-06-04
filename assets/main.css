@@ -228,7 +228,7 @@ body {
   background-repeat:no-repeat;
   border: none;
   cursor:pointer;
-  overflow: hidden;        
+  overflow: hidden;
 }
 
 .homepage_code > button#about_home:hover {
@@ -273,4 +273,66 @@ body {
 
 .homepage_code > #contact_home {
   color: #82b;
+}
+
+/* button.contact_page, .contact_page > img { */
+img.contact_page {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  font-size: 40px;
+  border-radius: 90px;
+  width: 90px;
+  height: 90px;
+}
+
+img.contact_page {
+  filter: brightness(50%);
+}
+
+img.contact_page:hover {
+  filter: brightness(100%);
+}
+
+img.contact_page:active {
+  filter: brightness(50%);
+}
+
+div.progress_bar, div.progress_bar_inside {
+  height: 30px;
+  border-radius: 5px;
+}
+
+div.progress_bar_inside > div {
+  padding-left: 20px;
+}
+
+div.progress_bar {
+  background-color: #000000;
+  width: 80%;
+  margin-top: 5px;
+}
+
+circle.border_track {
+  /*stroke: hsl(0, 0%, 93%);*/
+  stroke-width: 12px;
+  stroke-linecap: round;
+  stroke-dasharray: 400;
+  /* stroke-dashoffset: 420; /* Change number value to shift progress bar */
+  fill: rgba(0,0,0,0);
+  transform: rotate(270deg);
+}
+
+image.preview_image {
+  /*transform-origin: center; */
+  transform: translate(-50%, -50%);
+  transform-box: fill-box;
+}
+
+div.skills_list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 90%;
 }

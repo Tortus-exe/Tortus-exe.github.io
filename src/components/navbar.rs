@@ -22,7 +22,7 @@ pub fn Navbar() -> Element {
             div { class: "menu-bar-button",
                 img { id: "menu-button-image",
                     onclick: move |_| {
-                        hidden.set(!hidden());
+                        hidden.toggle();
                     },
                     src: asset!("/assets/images/menu-button-mobile.png")
                 }
@@ -30,13 +30,15 @@ pub fn Navbar() -> Element {
             div { id: "navbar-parent",
                 div { class: {if hidden() {{"hide-on-mobile"}} else {{""}}}, id: "navbar",
                     div { class: "hide-on-mobile",
-                        id: "navbar-preview-element"
-                        
+                        id: "navbar-preview-element",
+                        img {
+                            src: "https://avatars.githubusercontent.com/u/65506144?v=4"
+                        }
                     }
                     for &(name, route) in buttons.iter() {
                         button { class: "navbar-button",
                             onclick: move |_| { 
-                                hidden.set(!hidden());
+                                hidden.toggle();
                                 nav.push(route.clone()); 
                             },
                             "{name}"

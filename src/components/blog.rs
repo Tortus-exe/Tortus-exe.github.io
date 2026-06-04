@@ -22,7 +22,7 @@ fn blog_if_exists(filename: Asset) -> Element {
         let fnameclone = filename.clone();
         async move {
             let result = getAsset(filename).await;
-            match(result) {
+            match result {
                 Ok(response) => contents.set(response),
                 Err(error) => contents.set(error)
             }

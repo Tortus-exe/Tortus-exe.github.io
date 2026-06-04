@@ -15,7 +15,7 @@ struct Home_code {
     tail: &'static str,
 }
 
-const hs_home: Home_code = Home_code {
+const HS_HOME: Home_code = Home_code {
     pre_about:
 r#"type "#,
     about:
@@ -50,7 +50,7 @@ main = projects $ Just "interesting"
 "#
 };
 
-const c_home: Home_code = Home_code {
+const C_HOME: Home_code = Home_code {
     pre_about:
 r#"
 #include ""#,
@@ -87,14 +87,14 @@ void main() { projects("are cool!", 5); }
 "#,
 };
 
-const code: [Home_code;2] = [
-    hs_home,
-    c_home
+const CODE: [Home_code;2] = [
+    HS_HOME,
+    C_HOME
 ];
 
 #[component]
 pub fn Home() -> Element {
-    let text: usize = (getrandom::u32().unwrap_or(0) as usize) % code.len();
+    let text: usize = (getrandom::u32().unwrap_or(0) as usize) % CODE.len();
     let nav = navigator();
 
     rsx! {
@@ -102,17 +102,17 @@ pub fn Home() -> Element {
             h1 { "Tort's homepage" }
         }
         div { class: "homepage_code",
-            p {class: "grayed_out", "{code[text].pre_about}"}
-            button {onclick: move |_| {nav.push(Route::About {});}, class: "grayed_out", id: "about_home", "{code[text].about}"}
-            p {class: "grayed_out", "{code[text].pre_projects}"}
-            button {onclick: move |_| {nav.push(Route::Projects {});}, class: "grayed_out", id: "projects_home", "{code[text].projects}"}
-            p {class: "grayed_out", "{code[text].pre_skills}"}
-            button {onclick: move |_| {nav.push(Route::Skills {});}, class: "grayed_out", id: "skills_home", "{code[text].skills}"}
-            p {class: "grayed_out", "{code[text].pre_articles}"}
-            button {onclick: move |_| {nav.push(Route::Articles {});}, class: "grayed_out", id: "articles_home", "{code[text].articles}"}
-            p {class: "grayed_out", "{code[text].pre_contact}"}
-            button {onclick: move |_| {nav.push(Route::Contact {});}, class: "grayed_out", id: "contact_home", "{code[text].contact}"}
-            p {class: "grayed_out", "{code[text].tail}"}
+            p {class: "grayed_out", "{CODE[text].pre_about}"}
+            button {onclick: move |_| {nav.push(Route::About {});}, class: "grayed_out", id: "about_home", "{CODE[text].about}"}
+            p {class: "grayed_out", "{CODE[text].pre_projects}"}
+            button {onclick: move |_| {nav.push(Route::Projects {});}, class: "grayed_out", id: "projects_home", "{CODE[text].projects}"}
+            p {class: "grayed_out", "{CODE[text].pre_skills}"}
+            button {onclick: move |_| {nav.push(Route::Skills {});}, class: "grayed_out", id: "skills_home", "{CODE[text].skills}"}
+            p {class: "grayed_out", "{CODE[text].pre_articles}"}
+            button {onclick: move |_| {nav.push(Route::Articles {});}, class: "grayed_out", id: "articles_home", "{CODE[text].articles}"}
+            p {class: "grayed_out", "{CODE[text].pre_contact}"}
+            button {onclick: move |_| {nav.push(Route::Contact {});}, class: "grayed_out", id: "contact_home", "{CODE[text].contact}"}
+            p {class: "grayed_out", "{CODE[text].tail}"}
         }
     }
 }

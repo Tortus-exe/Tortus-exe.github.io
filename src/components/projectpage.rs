@@ -44,7 +44,7 @@ fn ProjectPageTemplate(filename: Asset, icon: Option<ImageSource>, projprops: &'
         let fnameclone = filename.clone();
         async move {
             let result = getAsset(fnameclone).await;
-            match(result) {
+            match result {
                 Ok(response) => contents.set(response),
                 Err(error) => contents.set(error)
             }

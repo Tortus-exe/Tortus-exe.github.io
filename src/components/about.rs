@@ -8,7 +8,7 @@ pub fn About() -> Element {
     use_future(move || async move {
         let about_text_name = asset!("/assets/about.md");
         let result = getAsset(about_text_name).await;
-        match(result) {
+        match result {
             Ok(response) => about_text.set(response),
             Err(error) => about_text.set(error)
         }
