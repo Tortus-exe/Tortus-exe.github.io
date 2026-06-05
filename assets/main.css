@@ -6,6 +6,7 @@
   padding-bottom: 100%;
   top: 0;
   position: sticky;
+  max-width: 100%;
 }
 
 @media (min-width: 500px) {
@@ -70,8 +71,8 @@
 
 #body-contents {
   padding: 1%; 
-  min-width: 80vw;
-  width: 80vw;
+  min-width: 74vw;
+  width: 74vw;
 }
 
 
@@ -325,8 +326,8 @@ circle.border_track {
   transform: rotate(270deg);
 }
 
-image.preview_image {
-  /*transform-origin: center; */
+image.skill_image {
+  /*transform-origin: center;*/
   transform: translate(-50%, -50%);
   transform-box: fill-box;
 }
@@ -334,5 +335,5 @@ image.preview_image {
 div.skills_list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 90%;
+  max-width: 80vw;
 }
