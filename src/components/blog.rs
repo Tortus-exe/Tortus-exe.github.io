@@ -4,6 +4,17 @@ use crate::components::categories::{BlogCategory, get_blog_list};
 use crate::utils::getAsset::getAsset;
 // use markdown::{to_html_with_options, Options, CompileOptions};
 use comrak::{markdown_to_html, Options};
+use std::sync::Arc;
+use phf::{Map, phf_map};
+
+static REGISTERED_ASSETS: Map<&'static str, Asset> = phf_map! {
+    "kawajapa_train" => asset!("/assets/images/A-B-train.png"),
+    "kawajapa_sakura_ga_aruku" => asset!("/assets/images/A-B-train-sakura-ga-aruku.png"),
+    "kawajapa_sakura_ga_nihonjin_da" => asset!("/assets/images/A-B-train-sakura-ga-nihonjin-da.png"),
+    "kawajapa_sakura_da" => asset!("/assets/images/A-B-train-sakura-da.png"),
+    "kawajapa_keeki" => asset!("/assets/images/A-B-train-keeki.png"),
+    "kawajapa_keeki_zero" => asset!("/assets/images/A-B-train-keeki-zero.png"),
+};
 
 /// Blog page
 #[component]
@@ -53,6 +64,19 @@ fn blog_if_exists(filename: Asset) -> Element {
     options.extension.footnotes = true;
     options.extension.header_id_prefix = Some("sect-".to_string());
     options.render.r#unsafe = true;
+    options.extension.image_url_rewriter = Some(Arc::new(
+        |url: &str| {
+            if url.starts_with('?') {
+                let result = REGISTERED_ASSETS.get(&url[1..]);
+                match result {
+                    Some(a) => a.to_string(),
+                    None => url.to_string()
+                }
+            } else {
+                url.to_string()
+            }
+        }
+    ));
 
     // let options = Options {
     //     compile: CompileOptions {
