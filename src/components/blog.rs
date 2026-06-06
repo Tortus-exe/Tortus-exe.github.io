@@ -1,7 +1,8 @@
 use dioxus::prelude::*;
-use dioxus_markdown::Markdown;
+use dioxus_markdown::{Markdown, CustomComponents};
 use crate::components::categories::{BlogCategory, get_blog_list};
 use crate::utils::getAsset::getAsset;
+use markdown::{to_html_with_options, Options, CompileOptions};
 
 /// Blog page
 #[component]
@@ -16,7 +17,26 @@ pub fn Blog(category: BlogCategory, name: String) -> Element {
     }
 }
 
+#[component]
+pub fn Color(style: String, text: String) -> Element {
+    rsx! {
+        span {
+            style: style,
+            "{text}"
+        }
+    }
+}
+
 fn blog_if_exists(filename: Asset) -> Element {
+    let mut components = CustomComponents::new();
+    components.register("Color", |props| {
+        Ok(rsx! {
+            Color { 
+                style: props.get("style").unwrap(), 
+                text: props.get("text").unwrap()
+            }
+        })
+    });
     let mut contents = use_signal(|| "".to_string());
     use_future(move || {
         let fnameclone = filename.clone();
@@ -28,11 +48,21 @@ fn blog_if_exists(filename: Asset) -> Element {
             }
     }});
 
+    let options = Options {
+        compile: CompileOptions {
+            allow_dangerous_html: true, // CRITICAL: This lets <span style="..."> work!
+            ..CompileOptions::default()
+        },
+        ..Options::default()
+    };
+
     rsx! {
         div { class: "blog",
-            Markdown {
-                src: "{contents}"
-            }
+            dangerous_inner_html: to_html_with_options(&contents.read(), &options).unwrap()
+            // Markdown {
+            //     src: "{contents}",
+            //     components
+            // }
         }
     }
 }

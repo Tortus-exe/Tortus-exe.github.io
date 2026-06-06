@@ -16,10 +16,15 @@ const CANTONESE_CATEGORIES: [BlogEntry; 6] = [
     BlogEntry {asset: asset!("/assets/cantonese/numbers.md"), title: "from one to infinity", thumbnail: ImageSource::A(asset!("/assets/images/cantonese.png"))},
 ];
 
+const JAPANESE_CATEGORIES: [BlogEntry; 1] = [
+    BlogEntry {asset: asset!("/assets/japanese/kj1.md"), title: "Kawajapa 1", thumbnail: ImageSource::A(asset!("/assets/images/kawajapa.png"))},
+];
+
 #[derive(PartialEq, Clone, Debug, Copy)]
 pub enum BlogCategory {
     BQN,
-    Cantonese
+    Cantonese,
+    Japanese
 }
 
 pub struct ParseCategoryError;
@@ -30,6 +35,7 @@ impl FromStr for BlogCategory {
         match s {
             "BQN" => Ok(BlogCategory::BQN),
             "Cantonese" => Ok(BlogCategory::Cantonese),
+            "Japanese" => Ok(BlogCategory::Japanese),
             _ => Err(ParseCategoryError)
         }
     }
@@ -40,6 +46,7 @@ impl ToString for BlogCategory {
         match self {
             BlogCategory::BQN => "BQN",
             BlogCategory::Cantonese => "Cantonese",
+            BlogCategory::Japanese => "Japanese",
         }.to_string()
     }
 }
@@ -61,6 +68,7 @@ pub fn get_blog_list(category: &BlogCategory) -> Box<[BlogEntry]> {
     match category {
         BlogCategory::BQN => Box::new(BQN_CATEGORIES),
         BlogCategory::Cantonese => Box::new(CANTONESE_CATEGORIES),
+        BlogCategory::Japanese => Box::new(JAPANESE_CATEGORIES),
     }
 }
 

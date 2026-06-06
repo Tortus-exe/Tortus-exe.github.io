@@ -38,6 +38,12 @@ pub fn Articles() -> Element {
                 onclick: move |_| {nav.push(
                     Route::Category {category: BlogCategory::BQN});}
             }
+            CategoryPreview {
+                source: ImageSource::A(asset!("/assets/images/kawajapa.png")),
+                name: "Japanese",
+                onclick: move |_| {nav.push(
+                    Route::Category {category: BlogCategory::Japanese});}
+            }
         }
     }
 }
