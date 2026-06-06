@@ -7,11 +7,11 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+comrak = "0.52.0"
 dioxus = { version = "0.6.0", features = ["router"] }
 dioxus-markdown = "0.0.1"
 getrandom = { version = "0.3.3", features = ["wasm_js"] }
 gloo-net = { version = "0.6.0", features = ["http"] }
-markdown = "1.0.0"
 
 [features]
 default = ["web"]

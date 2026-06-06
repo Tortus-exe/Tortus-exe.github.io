@@ -2,7 +2,8 @@ use dioxus::prelude::*;
 use dioxus_markdown::{Markdown, CustomComponents};
 use crate::components::categories::{BlogCategory, get_blog_list};
 use crate::utils::getAsset::getAsset;
-use markdown::{to_html_with_options, Options, CompileOptions};
+// use markdown::{to_html_with_options, Options, CompileOptions};
+use comrak::{markdown_to_html, Options};
 
 /// Blog page
 #[component]
@@ -48,17 +49,23 @@ fn blog_if_exists(filename: Asset) -> Element {
             }
     }});
 
-    let options = Options {
-        compile: CompileOptions {
-            allow_dangerous_html: true, // CRITICAL: This lets <span style="..."> work!
-            ..CompileOptions::default()
-        },
-        ..Options::default()
-    };
+    let mut options = Options::default();
+    options.extension.footnotes = true;
+    options.extension.header_id_prefix = Some("sect-".to_string());
+    options.render.r#unsafe = true;
+
+    // let options = Options {
+    //     compile: CompileOptions {
+    //         allow_dangerous_html: true, // CRITICAL: This lets <span style="..."> work!
+    //         ..CompileOptions::default()
+    //     },
+    //     ..Options::default()
+    // };
 
     rsx! {
         div { class: "blog",
-            dangerous_inner_html: to_html_with_options(&contents.read(), &options).unwrap()
+            // dangerous_inner_html: to_html_with_options(&contents.read(), &options).unwrap()
+            dangerous_inner_html: markdown_to_html(&contents.read(), &options)
             // Markdown {
             //     src: "{contents}",
             //     components

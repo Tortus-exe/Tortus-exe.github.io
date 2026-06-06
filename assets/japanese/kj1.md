@@ -1,3 +1,13 @@
+# CONTENTS
+
+- [Introduction](#sect-introduction)
+    - [Credentials](#sect-my-credentials)
+- [Videos Covered](#sect-videos-covered)
+- [Japanese Sentences](#sect-japanese-sentences)
+- [The Japanese Zero Pronoun](#sect-the-japanese-zero-pronoun)
+- [The Wa particle](#sect-the-wa-particle)
+- [Conclusion](#sect-conclusion)
+
 # Introduction
 
 I commonly recommend people to watch KawaJapa's videos online. However, her voice can be unsettling for some people. That's why I'm starting this journey to codify everything in those videos into text form, so that more people can be exposed to her ideas.
@@ -8,13 +18,13 @@ Kanji are hard to read, we will show the hiragana reading of unfamiliar kanji. T
 
 ## My Credentials
 
-I am roughly at an N2 level of Japanese, and am awaiting December to take my Japanese Language Proficiency Test (JLPT). I have been studying the language for around about 8 years now. Hopefully, that experience will show in my explanations.
+I am roughly at an N2 level of Japanese, and am awaiting December to take my Japanese Language Proficiency Test (JLPT). I have been studying the language since around 2018. Hopefully, that experience will show in my explanations.
 
 ## Your Credentials
 
 You should be familiar with hiragana and katakana to read this article. You should also understand the concept of Kanji. If you do not, please practice and come back to the article! これがよめなければ、がんばってれんしゅうしてください。
 
-# Videos covered:
+# Videos covered
 
 This article will cover the following videos:
 - [Predicate sentence structures in Japanese with the Ga particle (が)](https://www.youtube.com/watch?v=DJ_RKFi7GKU)
@@ -53,7 +63,7 @@ The zero pronoun, or øが (read "zero-ga") is a mysterious pronoun in that it i
 
 Of course, "it" refers to the barbell. Why can't we say "Lift the barbell, then place the barbell on the rack."? In English, this is a perfectly valid sentence, but it is *not a natural* sentence. If the listener already knows about the barbell, we would waste our energy by mentioning it again. 
 
-Just like how the meaning of "it" depends on context, so too does øが. In the previous case, ø represents the aforementioned 私, the doer of the sentence. In another sentence, such as "<span style="color:#35f152">ミルク</span>を<span style="color:#2575f6">持(も)っている</span>？", meaning "Got milk?"\[1\], we see the zero pronoun in action... in both languages! In English, who is the doer of the sentence "Got milk?" Obviously, it's "you"! (**Have you** got milk?). Similarly, the ø in Japanese is you. (<span style="color:red;">**あなた**</span>**が**<span style="color:#35f152;">ミルク</span>を<span style="color:#2575f6;">持っている</span>？).
+Just like how the meaning of "it" depends on context, so too does øが. In the previous case, ø represents the aforementioned 私, the doer of the sentence. In another sentence, such as "<span style="color:#35f152">ミルク</span>を<span style="color:#2575f6">持(も)っている</span>？", meaning "Got milk?"[^1], we see the zero pronoun in action... in both languages! In English, who is the doer of the sentence "Got milk?" Obviously, it's "you"! (**Have you** got milk?). Similarly, the ø in Japanese is you. (<span style="color:red;">**あなた**</span>**が**<span style="color:#35f152;">ミルク</span>を<span style="color:#2575f6;">持っている</span>？).
 
 The zero pronoun is not limited to *doers* of sentences either. Take the Japanese sentence "<span style="color:red;">私</span>が<span style="color:#2575f6">食(た)べた</span>". Literally, it means I ate. However, it is unclear what exactly I ate - another case for the ø pronoun. <span style="color:red;">私</span>が<span style="color:#35f152">ø</span>を<span style="color:#2575f6">食(た)べた</span>. This means "I ate 'it'". "It" could be anything... cake, some rice, whatever. But if I have previously mentioned some food, for example that I was craving tofu, then it likely means that I ate the tofu.
 
@@ -77,7 +87,7 @@ In the first sentence, we translate it as "As for Tokyo, ø (I) am going there o
 
 ------------
 
-\[1\]: Of course, in English, "Got milk?" is not proper grammar... but in Japanese, ミルクを持っている？ is completely correct and valid formal grammar.
+[^1]: Of course, in English, "Got milk?" is not proper grammar... but in Japanese, ミルクを持っている？ is completely correct and valid formal grammar.
 
 # conclusion
 
