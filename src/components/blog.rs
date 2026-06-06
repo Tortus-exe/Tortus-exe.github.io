@@ -14,6 +14,11 @@ static REGISTERED_ASSETS: Map<&'static str, Asset> = phf_map! {
     "kawajapa_sakura_da" => asset!("/assets/images/A-B-train-sakura-da.png"),
     "kawajapa_keeki" => asset!("/assets/images/A-B-train-keeki.png"),
     "kawajapa_keeki_zero" => asset!("/assets/images/A-B-train-keeki-zero.png"),
+    "watashi_ha_amerikajin" => asset!("/assets/images/ha-flag-amerika.png"),
+    "booru_nageru" => asset!("/assets/images/ni-particle-ball.png"),
+    "booru_sakura" => asset!("/assets/images/ni-particle-ball-sakura.png"),
+    "booru_ha_ga" => asset!("/assets/images/ni-particle-ha-on-ga.png"),
+    "booru_ha_wo" => asset!("/assets/images/ni-particle-ha-on-wo.png"),
 };
 
 /// Blog page
