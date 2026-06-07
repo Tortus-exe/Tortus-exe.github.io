@@ -19,6 +19,7 @@ static REGISTERED_ASSETS: Map<&'static str, Asset> = phf_map! {
     "booru_sakura" => asset!("/assets/images/ni-particle-ball-sakura.png"),
     "booru_ha_ga" => asset!("/assets/images/ni-particle-ha-on-ga.png"),
     "booru_ha_wo" => asset!("/assets/images/ni-particle-ha-on-wo.png"),
+    "kawajapa_white_train" => asset!("/assets/images/kawajapa-white-train.png"),
 };
 
 /// Blog page

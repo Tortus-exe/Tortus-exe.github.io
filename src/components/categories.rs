@@ -16,9 +16,10 @@ const CANTONESE_CATEGORIES: [BlogEntry; 6] = [
     BlogEntry {asset: asset!("/assets/cantonese/numbers.md"), title: "from one to infinity", thumbnail: ImageSource::A(asset!("/assets/images/cantonese.png"))},
 ];
 
-const JAPANESE_CATEGORIES: [BlogEntry; 2] = [
+const JAPANESE_CATEGORIES: [BlogEntry; 3] = [
     BlogEntry {asset: asset!("/assets/japanese/kj1.md"), title: "Kawajapa 1", thumbnail: ImageSource::A(asset!("/assets/images/kawajapa.png"))},
     BlogEntry {asset: asset!("/assets/japanese/kj2.md"), title: "Kawajapa 2", thumbnail: ImageSource::A(asset!("/assets/images/kawajapa.png"))},
+    BlogEntry {asset: asset!("/assets/japanese/kj3.md"), title: "Kawajapa 3", thumbnail: ImageSource::A(asset!("/assets/images/kawajapa.png"))},
 ];
 
 #[derive(PartialEq, Clone, Debug, Copy)]
