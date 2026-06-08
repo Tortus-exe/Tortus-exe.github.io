@@ -9,6 +9,10 @@
   max-width: 100%;
 }
 
+#navbar-preview-element > img {
+  max-width: 100%;
+}
+
 @media (min-width: 500px) {
   #navbar {
     width: 50vw;
