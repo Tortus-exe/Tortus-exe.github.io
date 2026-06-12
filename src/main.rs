@@ -12,6 +12,7 @@ use components::{
     projects::Projects,
     projectpage::ProjectPage,
     contact::Contact};
+use dioxus::logger::tracing;
 
 #[derive(Debug, Clone, Routable, PartialEq)]
 #[rustfmt::skip]
@@ -41,6 +42,8 @@ const FAVICON: Asset = asset!("/assets/favicon.ico");
 const MAIN_CSS: Asset = asset!("/assets/main.css");
 
 fn main() {
+    dioxus::logger::init(tracing::Level::DEBUG).expect("failed to init logger");
+
     dioxus::launch(App);
 }
 

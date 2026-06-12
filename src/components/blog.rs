@@ -1,5 +1,5 @@
 use dioxus::prelude::*;
-use dioxus_markdown::{Markdown, CustomComponents};
+// use dioxus_markdown::{Markdown, CustomComponents};
 use crate::components::categories::{BlogCategory, get_blog_list};
 use crate::utils::getAsset::getAsset;
 // use markdown::{to_html_with_options, Options, CompileOptions};
@@ -7,7 +7,7 @@ use comrak::{markdown_to_html, Options};
 use std::sync::Arc;
 use phf::{Map, phf_map};
 
-static REGISTERED_ASSETS: Map<&'static str, Asset> = phf_map! {
+pub static REGISTERED_ASSETS: Map<&'static str, Asset> = phf_map! {
     "kawajapa_train" => asset!("/assets/images/A-B-train.png"),
     "kawajapa_sakura_ga_aruku" => asset!("/assets/images/A-B-train-sakura-ga-aruku.png"),
     "kawajapa_sakura_ga_nihonjin_da" => asset!("/assets/images/A-B-train-sakura-ga-nihonjin-da.png"),
@@ -20,6 +20,8 @@ static REGISTERED_ASSETS: Map<&'static str, Asset> = phf_map! {
     "booru_ha_ga" => asset!("/assets/images/ni-particle-ha-on-ga.png"),
     "booru_ha_wo" => asset!("/assets/images/ni-particle-ha-on-wo.png"),
     "kawajapa_white_train" => asset!("/assets/images/kawajapa-white-train.png"),
+    "bubble_organizer_straight_timeline" => asset!("/assets/images/bubble-organizer-straight-timeline.png"),
+    "bubble_organizer_branched_timeline" => asset!("/assets/images/bubble-organizer-branched-timeline.png"),
 };
 
 /// Blog page
@@ -46,15 +48,15 @@ pub fn Color(style: String, text: String) -> Element {
 }
 
 fn blog_if_exists(filename: Asset) -> Element {
-    let mut components = CustomComponents::new();
-    components.register("Color", |props| {
-        Ok(rsx! {
-            Color { 
-                style: props.get("style").unwrap(), 
-                text: props.get("text").unwrap()
-            }
-        })
-    });
+    // let mut components = CustomComponents::new();
+    // components.register("Color", |props| {
+    //     Ok(rsx! {
+    //         Color { 
+    //             style: props.get("style").unwrap(), 
+    //             text: props.get("text").unwrap()
+    //         }
+    //     })
+    // });
     let mut contents = use_signal(|| "".to_string());
     use_future(move || {
         let fnameclone = filename.clone();

@@ -43,7 +43,7 @@ pub struct ProjectPageData {
     pub projprops: ProjectProperties
 }
 
-const PROJECTS: [ProjectPageData;2] = [
+const PROJECTS: [ProjectPageData;3] = [
     ProjectPageData {
         image: ImageSource::A(asset!("/assets/images/stackVMBG.png")),
         title: "StackVM",
@@ -76,6 +76,24 @@ const PROJECTS: [ProjectPageData;2] = [
         projprops: ProjectProperties {
             language: Some("Haskell"),
             link: Some("https://github.com/Tortus-exe/Verimacro"),
+            status: Some("completed"),
+            collabs: None
+        }
+    },
+    ProjectPageData {
+        image: ImageSource::A(asset!("/assets/images/bubble-organizer.png")),
+        title: "Bubble Organizer",
+        desc: "A git-style planner for your life!",
+        icon: None,
+        route: ProjectRouting::Template("Bubble Organizer"),
+        filename: asset!("/assets/projects/bubble_organizer.md"),
+        background: Some(BackgroundInfo {
+            color: "#112805",
+            symbol: Some(ImageSource::A(asset!("/assets/images/bubble-organizer.png")))
+        }),
+        projprops: ProjectProperties {
+            language: Some("Rust"),
+            link: Some("https://github.com/Tortus-exe/bubble-organizer"),
             status: Some("completed"),
             collabs: None
         }

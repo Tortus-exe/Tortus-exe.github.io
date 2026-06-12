@@ -1,8 +1,11 @@
 use dioxus::prelude::*;
-use dioxus_markdown::Markdown;
+use comrak::{markdown_to_html, Options};
 use crate::components::articles::ImageSource;
 use crate::components::projects::{ProjectPageData, get_project_page_data, ProjectProperties, BackgroundInfo};
 use crate::utils::getAsset::getAsset;
+use crate::components::blog::REGISTERED_ASSETS;
+use std::sync::Arc;
+use dioxus::logger::tracing;
 
 #[component]
 pub fn ProjectPage(title: String) -> Element {
@@ -51,6 +54,25 @@ fn ProjectPageTemplate(filename: Asset, icon: Option<ImageSource>, projprops: &'
         }
     });
 
+    let mut options = Options::default();
+    options.extension.footnotes = true;
+    options.extension.header_id_prefix = Some("sect-".to_string());
+    options.render.r#unsafe = true;
+    options.extension.image_url_rewriter = Some(Arc::new(
+        |url: &str| {
+            if url.starts_with('?') {
+                let result = REGISTERED_ASSETS.get(&url[1..]);
+                // tracing::debug!("{}: {:?}", url, result);
+                match result {
+                    Some(a) => a.to_string(),
+                    None => url.to_string()
+                }
+            } else {
+                url.to_string()
+            }
+        }
+    ));
+
     rsx! {
         div { class: "project",
             ProjectPropertyDisplay {
@@ -61,9 +83,13 @@ fn ProjectPageTemplate(filename: Asset, icon: Option<ImageSource>, projprops: &'
                     src: "{src}"
                 }
             })}
-            Markdown {
-                src: "{contents}",
+            div {
+                dangerous_inner_html: markdown_to_html(&contents.read(), &options)
             }
+
+            // Markdown {
+            //     src: "{contents}",
+            // }
         }
     }
 }
